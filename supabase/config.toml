@@ -1,0 +1,18 @@
+project_id = "mymysterybox"
+
+# Public endpoints are protected by Turnstile, HMAC signatures or a webhook secret instead of a JWT.
+# unsubscribe must accept Gmail/Yahoo one-click POSTs, which carry no Supabase key.
+[functions.subscribe]
+verify_jwt = false
+
+[functions.confirm]
+verify_jwt = false
+
+[functions.unsubscribe]
+verify_jwt = false
+
+[functions.brevo-webhook]
+verify_jwt = false
+
+[functions.draw-winner]
+verify_jwt = true

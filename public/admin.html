@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin – MyMysteryBox</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/admin.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/api.js"></script>
+<script src="/assets/admin.js" defer></script>
+</head>
+<body>
+<div class="m adm">
+<header class="hdr"><div class="wrap hdr-in"><span class="logo">MyMysteryBox admin</span><button type="button" class="ghost" id="logout" hidden>Log out</button></div></header>
+<main class="wrap">
+
+<section id="login-view">
+<h1 class="serif">Sign in</h1>
+<form id="login" class="card">
+<label>Email<input type="email" id="l-email" autocomplete="username" required></label>
+<label>Password<input type="password" id="l-pass" autocomplete="current-password" required></label>
+<button type="submit" class="btn">Sign in</button>
+<p class="err" id="login-err" hidden></p>
+</form>
+</section>
+
+<section id="app-view" hidden>
+<h2 class="serif">Sign-ups</h2>
+<div class="stats" id="stats"></div>
+<div class="actions"><button type="button" class="ghost" id="export">Export confirmed (CSV)</button></div>
+
+<h2 class="serif">Giveaways</h2>
+<div id="giveaways"></div>
+
+<h2 class="serif">New giveaway</h2>
+<form id="new-g" class="card grid">
+<label>Slug<input name="slug" required pattern="[a-z0-9-]{2,60}" placeholder="launch-giveaway"></label>
+<label>Title<input name="title" required></label>
+<label>Prize name<input name="prize_name" required></label>
+<label>Prize value<input name="prize_value" placeholder="€500"></label>
+<label class="wide">Prize description<input name="prize_description"></label>
+<label>Winners<input name="winners_count" type="number" min="1" value="1" required></label>
+<label>Excluded countries<input name="excluded_countries" placeholder="IT, BR"></label>
+<label>Starts<input name="starts_at" type="datetime-local" required></label>
+<label>Entries close<input name="ends_at" type="datetime-local" required></label>
+<label>Draw date<input name="draw_date" type="datetime-local" required></label>
+<div class="wide"><button type="submit" class="btn">Create as draft</button></div>
+<p class="err wide" id="new-err" hidden></p>
+</form>
+
+<h2 class="serif">Email problems</h2>
+<p class="hint">The last 20 failed sends. If this list grows, check the Brevo account and API key.</p>
+<div id="failures"></div>
+</section>
+</main>
+</div>
+</body>
+</html>

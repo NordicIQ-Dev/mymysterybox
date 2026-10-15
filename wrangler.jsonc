@@ -1,0 +1,11 @@
+// Only needed if you deploy as a Cloudflare Worker with static assets (like nordiciq-lab)
+// instead of a Cloudflare Pages project. Pages ignores this file.
+{
+  "name": "mymysterybox-landing",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
