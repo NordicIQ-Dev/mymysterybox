@@ -73,6 +73,18 @@
     } catch (_) { /* counter is optional */ }
   }
 
+  // ---------- Telegram link (from config) ----------
+  function initTelegram() {
+    const url = C.telegramUrl;
+    const btn = $("#telegram-btn");
+    if (!btn) return;
+    // Only set the link if it's a real URL (not a placeholder with brackets)
+    if (url && /^https:\/\/t\.me\//.test(url) && !url.includes("[")) {
+      btn.href = url;
+    }
+    // Otherwise leave as # (disabled until config is updated)
+  }
+
   // ---------- Mobile menu ----------
   function initMenu() {
     const dlg = $("#menu");
@@ -106,6 +118,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     initMenu();
     initBar();
+    initTelegram();
     loadGiveaway();
     loadCount();
   });
