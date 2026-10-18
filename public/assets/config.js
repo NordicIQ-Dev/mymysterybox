@@ -1,8 +1,8 @@
 // Public configuration. Everything here is safe to expose in the browser.
 // Secret keys live ONLY in Supabase secrets.
 window.MMB_CONFIG = {
-  supabaseUrl: "https://[PROJECT-REF].supabase.co",
-  supabaseAnonKey: "[SUPABASE ANON / PUBLISHABLE KEY]",
+  supabaseUrl: "https://kgpkycxmvhdssqfhudnmd.supabase.co",
+  supabaseAnonKey: "sb_publishable_NXASgrVtdYqp5RVH4TEk6A_JQa08Kga",
   // Telegram group link. Replace the placeholder with your actual Telegram group URL when it's live.
   // Format: https://t.me/yourgroupname
   telegramUrl: "https://t.me/[TELEGRAM_GROUP]",
