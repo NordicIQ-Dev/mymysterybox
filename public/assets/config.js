@@ -1,12 +1,11 @@
 // Public configuration. Everything here is safe to expose in the browser.
-// Secret keys (Brevo, Turnstile secret, service role) live ONLY in Supabase secrets.
+// Secret keys live ONLY in Supabase secrets.
 window.MMB_CONFIG = {
   supabaseUrl: "https://[PROJECT-REF].supabase.co",
   supabaseAnonKey: "[SUPABASE ANON / PUBLISHABLE KEY]",
-  // Cloudflare test key that always passes. Replace with the real site key before going live.
-  turnstileSiteKey: "1x00000000000000000000AA",
+  // Telegram group link. Replace [USERNAME] with your actual Telegram username.
+  telegramUrl: "https://t.me/mymysterybox",
   // Hide the "Already on the list" counter until it is big enough to impress.
   minCountToShow: 250,
-  // ISO country codes shown in the dropdown. Names are rendered in English by the browser.
   countries: ["AT","AU","BE","BG","CA","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","NZ","PL","PT","RO","SE","SI","SK","US"]
 };
